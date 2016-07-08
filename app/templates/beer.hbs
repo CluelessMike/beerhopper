@@ -1,0 +1,73 @@
+<div class="panel panel-default">
+  <div class="panel-heading"><h3>{{model.name}} {{partial organic}}</h3></div>
+  <div class="panel-body">
+  <div class="container-fluid">
+  <div class="row">
+	<div class="col-md-4">
+    <img class="img-rounded" src="{{model.labels.medium}}" alt="{{model.name}} label not available">
+    </div>
+  <div class="col-md-8">
+	<p>{{model.description}}</p>
+	<table class="table" class="col-md-12">
+    <tbody>
+	<tr>
+	<th scope="row">Style</th>
+	<td>{{#link-to "style" model.style.id}}{{model.style.name}}{{/link-to}}</td>
+	</tr>
+	<tr>
+	<th scope="row">Brewery</th>
+	<td>{{#link-to "brewery" model.breweries.0.id}}{{model.breweries.0.name}}{{/link-to}}</td>
+	</tr>
+	<tr>
+	<th scope="row">Category</th>
+	<td>{{model.style.category.name}}</td>
+	</tr>
+	{{#if model.available}}
+	<tr>
+	<th scope="row">Availability</th>
+	<td>{{model.available.description}}</td>
+	</tr>
+	{{/if}}
+	{{#if model.servingTemperatureDisplay}}
+	<tr>
+	<th scope="row">Serving temperature</th>
+	<td>{{model.servingTemperatureDisplay}}</td>
+	</tr>
+	{{/if}}
+	{{#if model.glass}}
+	<tr>
+	<th scope="row">Glass</th>
+	<td>{{model.glass.name}}</td>
+	</tr>
+	{{/if}}
+	{{#if model.foodPairings}}
+	<tr>
+	<th scope="row">Drink with</th>
+	<td>{{model.foodPairings}}</td>
+	</tr>
+	{{/if}}	
+	{{#if model.abv}}
+	<tr>
+	<th scope="row">Alcohol By Volume (ABV)</th>
+	<td>{{model.abv}}</td>
+	</tr>
+	{{/if}}
+	{{#if model.ibu}}
+	<tr>
+	<th scope="row">International&nbsp;Bittering&nbsp;Units&nbsp;(IBU)&nbsp;&nbsp;</th>
+	<td>{{model.ibu}}</td>
+	</tr>
+	{{/if}}
+	{{#if model.originalGravity}}
+	<tr>
+	<th scope="row">Original Gravity (OG)</th>
+	<td>{{model.originalGravity}}</td>
+	</tr>
+	{{/if}}
+  </tbody>
+ </table>
+ </div>
+	</div>
+  </div>
+  </div>
+</div>

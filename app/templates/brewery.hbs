@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+  <div class="panel-heading"><h3>{{model.name}} {{partial 'organic'}}</h3></div>
+  <div class="panel-body">
+  <div class="container-fluid">
+  <div class="row">
+	<div class="col-md-4">
+    <img class="img-rounded" src="{{model.images.squareMedium}}" alt="{{model.name}} logo not available">
+    </div>
+  <div class="col-md-8">
+	{{#if model.established}}
+	<p><strong>Established:</strong> {{model.established}}</p>
+	{{/if}}
+	{{#if model.website}}
+	<p><strong>Website:</strong> <a href="{{model.website}}" target="_blank">{{model.website}}</a></p>
+	{{/if}}
+	{{#if model.mailingListUrl}}
+	<p><strong>Mailing list:</strong> <a href="{{model.model.mailingListUrl}}" target="_blank">{{model.mailingListUrl}}</a></p>
+	{{/if}}
+	<p>{{model.description}}</p>
+	<p>{{partial organic}}</p>
+	</div>
+  </div>
+  </div>
+</div>
+</div>

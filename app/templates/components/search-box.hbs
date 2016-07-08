@@ -1,0 +1,12 @@
+	<form class="form form-horizontal" onsubmit="return false">
+	<div class="{{position}}">
+        <div class="input-group input-group-{{groupsize}}" >
+			{{input type="text" value=queryString class="form-control" placeholder=hint autofocus="autofocus" action="search"}}
+            <span class="input-group-btn">
+				<button type="button" class="btn btn-default" disabled={{findDisabled}} {{action 'search'}}>
+					<span class="glyphicon glyphicon-search"></span>
+                </button>
+            </span>
+        </div>
+	</div>
+    </form>
